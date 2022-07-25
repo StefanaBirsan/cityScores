@@ -1,0 +1,15 @@
+.rangeContainer {
+  position: relative;
+  height: 15px;
+  width: 300px;
+  background-color: rgb(212, 211, 211);
+  border-radius: 8px;
+}
+#base {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  height: 15px;
+  border-radius: 8px;
+  z-index: 50;
+}

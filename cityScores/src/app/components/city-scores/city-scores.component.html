@@ -1,0 +1,15 @@
+<div *ngIf="data" class="container">
+  <!-- <div #summaryDiv>{{ summaryText }}</div> -->
+  <div *ngIf="summaryText" [innerHTML]="summaryText || ''"></div>
+  <div *ngFor="let category of data['categories']">
+    <div class="containerItem">
+      <div class="qualityScoresItem">
+        <h3 id="name">{{ category.name }}</h3>
+        <h5>{{ category.score_out_of_10 | number: "1.0-0" }}</h5>
+        <app-rangebar
+          [properties]="propertyInitialiser(category.score_out_of_10)"
+        ></app-rangebar>
+      </div>
+    </div>
+  </div>
+</div>

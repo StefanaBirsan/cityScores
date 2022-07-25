@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>City Scores Project</h1>
+  <h3>Using 2 APIs to display info about cities.</h3>
+</div>
+
+<div class="filter" *ngIf="cities">
+  <label for="text" name="text">Filter users</label>
+  <input id="text" type="text" [(ngModel)]="text" />
+  <button (click)="filter()">Check if the names inlude a text</button>
+</div>
+
+<div class="cityList">
+  <button (click)="callCityAPI()">Get city</button>
+  <div *ngIf="!filtered">
+    <div *ngIf="cities" class="citiesContainer">
+      <div *ngFor="let city of cities">
+        <div class="card">
+          <a
+            (click)="callScoresAPI(city.href)"
+            [routerLink]="routerLinkReady ? ['cityScores'] : ''"
+          >
+            {{ city.name }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="filtered" class="citiesContainer">
+  <div *ngFor="let city of resultAfterFiltering">
+    <div class="card">
+      <a (click)="callScoresAPI(city.href)">
+        {{ city.name }}
+      </a>
+    </div>
+  </div>
+</div>

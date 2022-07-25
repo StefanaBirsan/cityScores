@@ -1,0 +1,74 @@
+* {
+  font-family: "Fjalla One", sans-serif;
+}
+.container {
+  margin: 0rem 20rem;
+  border: 3px solid olive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+  padding: 0rem 5rem;
+}
+.cityList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.citiesContainer {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 150px 150px 150px 150px 150px 150px 150px;
+  row-gap: 1rem;
+}
+.citiesContainer a {
+  text-decoration: none;
+  color: black;
+}
+.citiesContainer a:hover {
+  color: rgb(173, 173, 0);
+}
+
+button {
+  padding: 1rem 3rem;
+  background-color: white;
+  color: olive;
+  border: 2px solid olive;
+  margin: 0rem 2rem;
+  border-radius: 2px;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  margin-top: 3rem;
+}
+button:hover {
+  background-color: olive;
+  color: white;
+  transition: 0.5s ease-in-out;
+}
+span {
+  color: olive;
+}
+label {
+  margin: 0rem 0.5rem;
+}
+input {
+  padding: 0.4rem 0.5rem;
+}
+label {
+  margin: 0rem 1rem;
+}
+.filter button {
+  margin: 0rem 0.5rem;
+  padding: 0.5rem 1rem;
+}
+.filter {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
